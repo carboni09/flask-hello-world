@@ -3,3 +3,4 @@ Gunicorn
 apscheduler
 threading
 discord
+requests
