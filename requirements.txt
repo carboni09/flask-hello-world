@@ -1,6 +1,5 @@
 Flask
 Gunicorn
 apscheduler
-threading
 discord
 requests
