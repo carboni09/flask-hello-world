@@ -2,3 +2,4 @@ Flask
 Gunicorn
 apscheduler
 threading
+discord
