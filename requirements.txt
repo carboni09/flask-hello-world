@@ -1,5 +1,5 @@
 Flask
 Gunicorn
 apscheduler
-discord
+discord.py
 requests
