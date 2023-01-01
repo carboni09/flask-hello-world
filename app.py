@@ -64,9 +64,6 @@ starter_encouragements = [
   "You are a great person / bot!"
 ]
 
-if "responding" not in db.keys():
-  db["responding"] = True
-
 def get_quote():
   response = requests.get("https://zenquotes.io/api/random")
   json_data = json.loads(response.text)
