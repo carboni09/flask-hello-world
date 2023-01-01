@@ -52,7 +52,13 @@ import os
 import requests
 import json
 import random
-from keep_alive import keep_alive
+#from keep_alive import keep_alive
+from flask import Flask
+from threading import Thread
+
+
+
+
 
 client = discord.Client()
 
@@ -90,10 +96,20 @@ async def on_message(message):
   
 
   
+app = Flask('')
 
+@app.route('/')
+def home():
+    return "Hello. I am alive and well!"
+
+# def run():
+#   app.run(host='0.0.0.0')
+
+def keep_alive():
+    t = Thread(target=client.run(os.getenv('TOKEN')))
+    t.start()
   
 
-  
-
+ 
 keep_alive()
-client.run(os.getenv('TOKEN'))
+
