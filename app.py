@@ -91,25 +91,6 @@ async def on_message(message):
     quote = get_quote()
     await message.channel.send(quote)
 
-  
-
-  
-
-  
-app = Flask('')
-
-@app.route('/')
-def home():
-    return "Hello. I am alive and well!"
-
-# def run():
-#   app.run(host='0.0.0.0')
-
-def keep_alive():
-    t = Thread(target=client.run(os.getenv('TOKEN')))
-    t.start()
-  
-
  
-keep_alive()
+client.run(os.getenv('TOKEN'))
 
